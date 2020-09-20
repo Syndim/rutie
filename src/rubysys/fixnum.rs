@@ -26,6 +26,7 @@ extern "C" {
     pub fn rb_num2int(num: Value) -> libc::c_long;
     // unsigned long
     // rb_num2uint(VALUE val)
+    #[cfg(not(target_os = "windows"))]
     pub fn rb_num2uint(num: Value) -> libc::c_ulong;
     // long
     // rb_num2long(VALUE val)
